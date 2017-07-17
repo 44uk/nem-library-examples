@@ -1,5 +1,8 @@
 # NEM Library code examples
 
+[![npm version](https://badge.fury.io/js/nem-library.svg)](https://badge.fury.io/js/nem-library)
+[![Gitter chat](https://badges.gitter.im/nem-library-ts/Lobby.svg)](https://gitter.im/nem-library-ts/)
+
 This repository aims to help developers to learn about [NEM Library][nem-library] concepts with
 working use cases.
 
