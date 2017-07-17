@@ -1,0 +1,30 @@
+{
+  "name": "nem-library-examples",
+  "version": "1.0.0",
+  "description": "NEM Library code examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleixmorgadas/nem-library-examples.git"
+  },
+  "keywords": [
+    "NEM",
+    "Blockchain",
+    "Example"
+  ],
+  "author": "Aleix Morgadas <aleix602@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleixmorgadas/nem-library-examples/issues"
+  },
+  "homepage": "https://github.com/aleixmorgadas/nem-library-examples#readme",
+  "dependencies": {
+    "nem-library": "^0.2.32"
+  },
+  "devDependencies": {
+    "typescript": "^2.4.1"
+  }
+}
