@@ -1,3 +1,9 @@
+/**
+ * Run this code:
+ * tsc
+ * node concepts/blockchain/BlockHttpExample.js
+ */
+
 import {BlockHttp, NEMLibrary, NetworkTypes} from "nem-library";
 
 // Inicializate NEMLibrary for TEST_NET Network
