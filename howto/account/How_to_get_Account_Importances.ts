@@ -1,4 +1,4 @@
-import {AccountHttp, Address, NEMLibrary, NetworkTypes} from "nem-library";
+import {AccountHttp, NEMLibrary, NetworkTypes} from "nem-library";
 
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
