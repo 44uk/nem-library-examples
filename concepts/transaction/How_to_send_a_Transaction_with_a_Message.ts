@@ -1,8 +1,13 @@
 import {
-    NEMLibrary, NetworkTypes, Address, TransferTransaction, Transaction, TimeWindow,
-    EmptyMessage, MultisigTransaction, PublicAccount, TransactionHttp, Message
+    Address,
+    Message,
+    NEMLibrary,
+    NetworkTypes,
+    TimeWindow,
+    Transaction,
+    TransferTransaction,
+    XEM
 } from "nem-library";
-import {XEM} from "nem-library/dist/src/models/mosaic/XEM";
 
 // Inicializate NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
