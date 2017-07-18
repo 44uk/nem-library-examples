@@ -125,3 +125,5 @@ concepts/**/*.js
 howto/**/*.js
 concepts/**/*.js.map
 howto/**/*.js.map
+
+!howto/javascript/Using_NEM_Library_with_JavaScript.js

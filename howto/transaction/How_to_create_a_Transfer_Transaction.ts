@@ -1,6 +1,12 @@
 import {
-    NEMLibrary, NetworkTypes, Address, TransferTransaction, Transaction, TimeWindow,
-    EmptyMessage, MultisigTransaction, PublicAccount, TransactionHttp, XEM
+    Address,
+    EmptyMessage,
+    NEMLibrary,
+    NetworkTypes,
+    TimeWindow,
+    Transaction,
+    TransferTransaction,
+    XEM
 } from "nem-library";
 
 // Inicializate NEMLibrary for TEST_NET Network
