@@ -7,7 +7,7 @@ import {
 
 declare let process: any;
 
-// Inicializate NEMLibrary for TEST_NET Network
+// Initialize NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 const privateKey: string = process.env.PRIVATE_KEY;

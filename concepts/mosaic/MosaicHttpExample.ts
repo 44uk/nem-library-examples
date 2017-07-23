@@ -5,7 +5,7 @@
  */
 import {MosaicHttp, NEMLibrary, NetworkTypes} from "nem-library";
 
-// Inicializate NEMLibrary for TEST_NET Network
+// InitializeEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 const mosaicHttp = new MosaicHttp({domain: "104.128.226.60"});

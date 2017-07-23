@@ -9,7 +9,7 @@ import {
     XEM
 } from "nem-library";
 
-// Inicializate NEMLibrary for TEST_NET Network
+// Initialize NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 const transferTransaction: Transaction = TransferTransaction.create(

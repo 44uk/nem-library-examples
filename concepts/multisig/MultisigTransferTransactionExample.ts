@@ -6,7 +6,7 @@ import {
 // For environment variables
 declare let process: any;
 
-// Inicializate NEMLibrary for TEST_NET Network
+// Initialize NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 // Replace with a cosignatory private key

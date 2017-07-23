@@ -1,6 +1,6 @@
 import {BlockHttp, NEMLibrary, NetworkTypes} from "nem-library";
 
-// Inicializate NEMLibrary for TEST_NET Network
+// InitializeLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 const blockHttp = new BlockHttp({domain: "104.128.226.60"});
