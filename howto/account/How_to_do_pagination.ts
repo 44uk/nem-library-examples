@@ -1,21 +1,17 @@
+/**
+ * nem-library 0.3.0
+ */
+
 import { AccountHttp, Address, NEMLibrary, NetworkTypes, Transaction } from "nem-library";
 
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
+let address = new Address("TCFFOM-Q2SBX7-7E2FZC-3VX43Z-TRV4ZN-TXTCGW-BM5J");
+let accountHttp = new AccountHttp();
 
-const accountHttp = new AccountHttp();
+let pageable = accountHttp.outgoingTransactionsPaginated(address);
 
-let incomingTransactionsObservable = accountHttp.incomingTransactions(new Address("TCFFOM-Q2SBX7-7E2FZC-3VX43Z-TRV4ZN-TXTCGW-BM5J"));
-
-let firstFetch = true;
-incomingTransactionsObservable.subscribe(x => {
-    console.log("CALL ", x);
-    if (firstFetch) {
-        firstFetch = false;
-        const lastTransactionHash: string = x.pop()!.getTransactionInfo().hash.data;
-        console.log("LAST HASH", lastTransactionHash)
-        incomingTransactionsObservable = accountHttp.incomingTransactions(
-            new Address("TCFFOM-Q2SBX7-7E2FZC-3VX43Z-TRV4ZN-TXTCGW-BM5J"),
-            lastTransactionHash
-        )
-    }
+pageable.subscribe(incomingTransactions => {
+    // do something with the info
 });
+
+pageable.nextPage(); // Fetch the nexts 25 incomming transactions
