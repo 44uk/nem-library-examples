@@ -11,7 +11,7 @@ let accountHttp = new AccountHttp();
 let pageable = accountHttp.getHarvestInfoDataForAnAccountPaginated(address);
 
 pageable.subscribe(x => {
-
+    console.log(x);
 });
 
 pageable.nextPage(); // Fetch the nexts 25 AccountHarvestInfo
