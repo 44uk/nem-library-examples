@@ -1,6 +1,9 @@
+/**
+ * nem-library 0.3.0
+ */
 import {
     NEMLibrary, NetworkTypes, Address, TransferTransaction, Transaction, TimeWindow,
-    EmptyMessage, MultisigTransaction, PublicAccount, TransactionHttp, Message, XEM
+    XEM, PlainMessage
 } from "nem-library";
 
 // Initialize NEMLibrary for TEST_NET Network
@@ -10,5 +13,5 @@ const transferTransaction: Transaction = TransferTransaction.create(
     TimeWindow.createWithDeadline(),
     new Address("TCFFOM-Q2SBX7-7E2FZC-3VX43Z-TRV4ZN-TXTCGW-BM5J"),
     XEM(0),
-    Message.create("a transaction")
+    PlainMessage.create("a transaction")
 );
