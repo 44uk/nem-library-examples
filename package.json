@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/aleixmorgadas/nem-library-examples#readme",
   "dependencies": {
-    "nem-library": "^0.3.6"
+    "nem-library": "^0.3.7"
   },
   "devDependencies": {
     "typescript": "^2.4.1"
