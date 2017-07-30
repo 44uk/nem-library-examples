@@ -8,7 +8,7 @@ NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
     let pagedTransactions = accountHttp.allTransactionsPaginated(address, undefined, 100);
     let time = 0;
     pagedTransactions.subscribe(x => {
-        console.log("TIME ", ++time)
+        console.log("TIME ", ++time);
         console.log("transactions size", x.length);
     });
     pagedTransactions.nextPage();

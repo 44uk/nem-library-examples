@@ -123,7 +123,9 @@ typings/
 
 concepts/**/*.js
 howto/**/*.js
+issues/**/*.js
 concepts/**/*.js.map
 howto/**/*.js.map
+issues/**/*.js.map
 
 !howto/javascript/Using_NEM_Library_with_JavaScript.js
