@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/aleixmorgadas/nem-library-examples#readme",
   "dependencies": {
-    "nem-library": "^0.5.1"
+    "nem-library": "^0.5.1",
+    "rxjs": "^5.4.3"
   },
   "devDependencies": {
     "typescript": "^2.4.1"
