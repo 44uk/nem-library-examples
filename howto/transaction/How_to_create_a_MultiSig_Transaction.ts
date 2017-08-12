@@ -14,7 +14,7 @@ const multisigAccountPublicKey: string = process.env.MULTISIG_PUBLIC_KEY;
 const transferTransaction: Transaction = TransferTransaction.create(
     TimeWindow.createWithDeadline(),
     new Address("TCFFOM-Q2SBX7-7E2FZC-3VX43Z-TRV4ZN-TXTCGW-BM5J"),
-    XEM(2),
+    new XEM(2),
     EmptyMessage
 );
 

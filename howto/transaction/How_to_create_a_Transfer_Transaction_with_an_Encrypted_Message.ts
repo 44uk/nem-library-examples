@@ -22,6 +22,6 @@ const encryptedMessage = account.encryptMessage("a transaction", recipientPublic
 const transferTransaction = TransferTransaction.create(
     TimeWindow.createWithDeadline(),
     recipientPublicAccount.address,
-    XEM(2),
+    new XEM(2),
     encryptedMessage
 );
