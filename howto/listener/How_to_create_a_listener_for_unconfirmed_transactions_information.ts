@@ -9,7 +9,7 @@ NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 const address = new Address("TDM3DO-ZM5WJ3-ZRBPSM-YRU6JS-WKUCAH-5VIPOF-4W7K");
 
-let unconfirmedTransactionListener = new UnconfirmedTransactionListener({domain: "23.228.67.85"}).given(address);
+let unconfirmedTransactionListener = new UnconfirmedTransactionListener().given(address);
 unconfirmedTransactionListener.subscribe(x => {
     console.log(x);
 }, err => {

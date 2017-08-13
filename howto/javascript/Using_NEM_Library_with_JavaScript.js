@@ -11,7 +11,7 @@ const NEMLibrary = nemLibrary.NEMLibrary,
 
 // Initialize NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
-let transactionHttp = new TransactionHttp({domain: "104.128.226.60"});
+let transactionHttp = new TransactionHttp();
 
 let account = Account.createWithPrivateKey("<INSERT HERE YOUR PRIVATE KEY>");
 

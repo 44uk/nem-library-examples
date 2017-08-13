@@ -2,8 +2,8 @@
  * nem-library 0.5.1
  */
 import {
-    NEMLibrary, NetworkTypes, Address, TransferTransaction, Transaction, TimeWindow,
-    XEM, PlainMessage, MosaicHttp, TransactionHttp, Account, EmptyMessage
+    NEMLibrary, NetworkTypes, Address, TransferTransaction, TimeWindow,
+    MosaicHttp, TransactionHttp, Account, EmptyMessage
 } from "nem-library";
 import {Observable} from "rxjs/Observable";
 
@@ -15,8 +15,8 @@ NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 // Replace with a cosignatory private key
 const privateKey: string = process.env.PRIVATE_KEY;
 
-const transactionHttp = new TransactionHttp({domain: "104.128.226.60"});
-const mosaicHttp = new MosaicHttp({domain: "104.128.226.60"});
+const transactionHttp = new TransactionHttp();
+const mosaicHttp = new MosaicHttp();
 const account = Account.createWithPrivateKey(privateKey);
 
 Observable.from([

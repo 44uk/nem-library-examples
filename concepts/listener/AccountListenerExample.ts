@@ -9,7 +9,7 @@ NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 const address = new Address("TCJZJH-AV63RE-2JSKN2-7DFIHZ-RXIHAI-736WXE-OJGA");
 
-let accountListener = new AccountListener({domain: "23.228.67.85"}).given(address);
+let accountListener = new AccountListener().given(address);
 accountListener.subscribe(x => {
     console.log(x);
 }, err => {

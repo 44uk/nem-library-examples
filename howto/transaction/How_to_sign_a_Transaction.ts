@@ -7,7 +7,7 @@ declare let process: any;
 // Initialize NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
-const transactionHttp = new TransactionHttp({domain: "104.128.226.60"});
+const transactionHttp = new TransactionHttp();
 
 // Replace with a cosignatory private key
 const privateKey: string = process.env.PRIVATE_KEY;
