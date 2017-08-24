@@ -3,7 +3,7 @@
  */
 import {
     NEMLibrary, NetworkTypes, Address, TransferTransaction, TimeWindow,
-    MosaicHttp, TransactionHttp, Account, EmptyMessage
+    MosaicHttp, TransactionHttp, Account, EmptyMessage, MosaicId
 } from "nem-library";
 import {Observable} from "rxjs/Observable";
 
@@ -20,10 +20,10 @@ const mosaicHttp = new MosaicHttp();
 const account = Account.createWithPrivateKey(privateKey);
 
 Observable.from([
-    {namespace: "mynamespace", mosaic: "mosaic1", quantity: 10},
-    {namespace: "mynamespace", mosaic: "mosaic2", quantity: 10},
-    {namespace: "mynamespace", mosaic: "mosaic3", quantity: 10}
-]).flatMap(_ => mosaicHttp.getMosaicTransferableWithAmount(_.namespace, _.mosaic, _.quantity))
+    {mosaic: new MosaicId("mynamespace", "mosaic1"), quantity: 10},
+    {mosaic: new MosaicId("mynamespace", "mosaic2"), quantity: 10},
+    {mosaic: new MosaicId("mynamespace", "mosaic3"), quantity: 10}
+]).flatMap(_ => mosaicHttp.getMosaicTransferableWithAmount(_.mosaic, _.quantity))
     .toArray()
     .map(mosaics => TransferTransaction.createWithMosaics(
         TimeWindow.createWithDeadline(),
