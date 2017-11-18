@@ -15,6 +15,7 @@ accountHttp.unconfirmedTransactions(account.address)
     .flatMap(x => x )
     // just return the Multisig Transactions
     .filter(transaction => transaction.type == TransactionTypes.MULTISIG)
+    .map(transaction => transaction as MultisigTransaction)
     // Convert the multisig transaction into MultisigSignatureTransaction
     .map((transaction: MultisigTransaction): MultisigSignatureTransaction => MultisigSignatureTransaction.create(
         TimeWindow.createWithDeadline(),
