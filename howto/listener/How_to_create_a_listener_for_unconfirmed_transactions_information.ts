@@ -14,18 +14,19 @@ new UnconfirmedTransactionListener([
     {
         domain: '23.228.67.85'
     }
-]).given(address).subscribe(x => {
-    console.log('address', x);
+]).given(senderAddress).subscribe(x => {
+    console.log('sender', x);
 }, err => {
     console.log(err);
 });
+
 
 new UnconfirmedTransactionListener([
     {
         domain: '23.228.67.85'
     }
-]).given(senderAddress).subscribe(x => {
-    console.log('sender', x);
+]).given(address).subscribe(x => {
+    console.log('address', x);
 }, err => {
     console.log(err);
 });

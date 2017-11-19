@@ -23,4 +23,7 @@ const transferTransaction = TransferTransaction.create(
 
 const signedTransaction = account.signTransaction(transferTransaction);
 
-transactionHttp.announceTransaction(signedTransaction).subscribe( x => console.log(x));
+console.log(signedTransaction);
+
+transactionHttp.announceTransaction(signedTransaction)
+   .subscribe( x => console.log(x));
