@@ -2,7 +2,7 @@ import {
     AccountHttp, NEMLibrary, NetworkTypes, Address, Account, TransferTransaction, TimeWindow,
     EmptyMessage, MultisigTransaction, PublicAccount, TransactionHttp, SignedTransaction
 } from "nem-library";
-import {XEM} from "nem-library/dist/src/models/mosaic/XEM";
+import {XEM} from "nem-library/dist/src/models/asset/XEM";
 declare let process: any;
 
 // Initialize NEMLibrary for TEST_NET Network

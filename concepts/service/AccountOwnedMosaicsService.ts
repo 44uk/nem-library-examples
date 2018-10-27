@@ -1,10 +1,10 @@
-import {NEMLibrary, NetworkTypes, Address, AccountOwnedMosaicsService, AccountHttp, MosaicHttp} from "nem-library";
+import {NEMLibrary, NetworkTypes, Address, AccountOwnedAssetService, AccountHttp, AssetHttp} from "nem-library";
 
 // Initialize NEMLibrary for TEST_NET Network
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET);
 
 let address = new Address("");
-let accountOwnedMosaics = new AccountOwnedMosaicsService(new AccountHttp(), new MosaicHttp());
-accountOwnedMosaics.fromAddress(address).subscribe(mosaics => {
-    console.log(mosaics);
+let accountOwnedAsset = new AccountOwnedAssetService(new AccountHttp(), new AssetHttp());
+accountOwnedAsset.fromAddress(address).subscribe(asset => {
+    console.log(asset);
 });
