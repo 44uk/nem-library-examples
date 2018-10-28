@@ -11,7 +11,8 @@ let transactionHttp = new TransactionHttp();
 
 let account = Account.createWithPrivateKey("");
 
-accountHttp.unconfirmedTransactions(account.address).pipe(
+accountHttp.unconfirmedTransactions(account.address)
+    .pipe(
         // Convert result Transaction[] into Transaction
         flatMap(x => x ),
         // just return the Multisig Transactions
