@@ -1,8 +1,8 @@
 
 import {
     NEMLibrary, NetworkTypes, TimeWindow, Account, TransactionHttp,
-    MosaicDefinitionCreationTransaction, MosaicDefinition, PublicAccount, MosaicId, MosaicProperties, MosaicLevy,
-    MosaicLevyType
+    AssetDefinitionCreationTransaction, AssetDefinition, PublicAccount, AssetId, AssetProperties, AssetLevy,
+    AssetLevyType
 } from "nem-library";
 
 declare let process: any;
@@ -14,21 +14,21 @@ const privateKey: string = process.env.PRIVATE_KEY;
 const account = Account.createWithPrivateKey(privateKey);
 const transactionHttp = new TransactionHttp();
 
-const mosaicDefinitionTransaction = MosaicDefinitionCreationTransaction.create(
+const assetDefinitionTransaction = AssetDefinitionCreationTransaction.create(
     TimeWindow.createWithDeadline(),
-    new MosaicDefinition(
+    new AssetDefinition(
         PublicAccount.createWithPublicKey(account.publicKey),
-        new MosaicId("new-namespace", "new-mosaic"),
-        "mosaic description",
-        new MosaicProperties(0, 9000000, true, true),
-        new MosaicLevy(
-            MosaicLevyType.Percentil,
+        new AssetId("new-namespace", "new-asset"),
+        "asset description",
+        new AssetProperties(0, 9000000, true, true),
+        new AssetLevy(
+            AssetLevyType.Percentil,
             account.address,
-            new MosaicId("nem", "xem"),
+            new AssetId("nem", "xem"),
             2
         )
     )
 );
 
-const signedTransaction = account.signTransaction(mosaicDefinitionTransaction);
+const signedTransaction = account.signTransaction(assetDefinitionTransaction);
 transactionHttp.announceTransaction(signedTransaction).subscribe( x => console.log(x));
