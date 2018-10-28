@@ -33,4 +33,4 @@ accountHttp.unconfirmedTransactions(account.address).pipe(
     }, err => {
         // Know if something has gone wrong
         console.error(err)
-    })
+    });
