@@ -28,7 +28,7 @@ from([
     .pipe(
         flatMap(_ => assetHttp.getAssetTransferableWithAbsoluteAmount(_.asset, _.quantity)),
         toArray(),
-        map(assets => TransferTransaction.createWithMosaics(
+        map(assets => TransferTransaction.createWithAssets(
             TimeWindow.createWithDeadline(),
             new Address("TBV7LE4TFDEMGVOON5MYOK2P7TU2KEKLMHOLHQT6"),
             assets,
